@@ -10,9 +10,9 @@ from Cython.Build import cythonize
 required = [
     "pytest",
     "cython",
-    "numpy<=1.19",
+    # "numpy<=1.19",
     "tensorflow==1.14",
-    "numba==0.53.1",
+    "numba",
     "sympy",
     "pandas",
     "scikit-learn",
