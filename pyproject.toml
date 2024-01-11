@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "deepso"
+version = "0.1.1"
+description = "Inria Chile's port of DSO"
+authors = ["Inria Chile"]
+
+packages = [{ include = "dso" }]
+
+[tool.poetry.dependencies]
+python = "^3.6,<3.8"
+
+
+[tool.poetry.dev-dependencies]
+ruff = "*"
+bandit = "*"
+notebook = "*"
+ipywidgets = "*"
+pytest = "*"
+pytest-cov = "*"
+ipykernel = "*"
+
+[tool.ruff]
+line-length = 127
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+junit_family = "xunit2"
+log_cli = true
+log_cli_level = "INFO"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
